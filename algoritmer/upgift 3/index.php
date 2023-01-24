@@ -8,15 +8,18 @@
 </head>
 <body>
     <?php 
-        function factorial($num){
-            if($num <= 1){
+        function factorialtal($num){
+            if($num <= 1){ // kollar ifall $num är större eller lika med 1
                 return 1;
             }
                   else  
                 { 
-                return $num * factorial($num-1);
+                for($x=$num; $x >= 1; $x++){
+                    $num = $num * $x;
+                };
             }
         };
+        echo factorialtal(5);
     ?> 
 </body>
 </html>
